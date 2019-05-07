@@ -20,7 +20,8 @@ public class FindUniqueCharsFromListOfStrings {
 		/*stringList.stream().distinct().map(word -> {System.out.println(word);
 		return word.split("");
 		}).collect(toList());*/
-		 List<String> result = stringList.stream().distinct().map(word -> word.split("")).flatMap(Arrays :: stream).distinct().collect(toList());
+		
+		stringList.stream().distinct().map(string -> string.split("")).flatMap(Arrays :: stream).distinct().forEach(System.out :: println);
 	}
 
 	
